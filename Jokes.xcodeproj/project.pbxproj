@@ -22,6 +22,9 @@
 		05D90F36274BF79400A93410 /* SignUpPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D90F35274BF79400A93410 /* SignUpPasswordViewController.swift */; };
 		05D90F38274BF85F00A93410 /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D90F37274BF85F00A93410 /* CoordinatorFactory.swift */; };
 		05D90F3A274BFA7B00A93410 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D90F39274BFA7B00A93410 /* FlowController.swift */; };
+		05D90F3D274C025900A93410 /* JokesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D90F3C274C025900A93410 /* JokesViewController.swift */; };
+		05D90F42274C03B900A93410 /* JokeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D90F41274C03B900A93410 /* JokeAPI.swift */; };
+		05D90F45274C04AA00A93410 /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D90F44274C04AA00A93410 /* Joke.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		05D90F35274BF79400A93410 /* SignUpPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPasswordViewController.swift; sourceTree = "<group>"; };
 		05D90F37274BF85F00A93410 /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
 		05D90F39274BFA7B00A93410 /* FlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
+		05D90F3C274C025900A93410 /* JokesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesViewController.swift; sourceTree = "<group>"; };
+		05D90F41274C03B900A93410 /* JokeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeAPI.swift; sourceTree = "<group>"; };
+		05D90F44274C04AA00A93410 /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,13 +80,13 @@
 		05D90F08274BEAE800A93410 /* Jokes */ = {
 			isa = PBXGroup;
 			children = (
+				05D90F17274BEAED00A93410 /* Info.plist */,
+				05D90F43274C049F00A93410 /* Models */,
+				05D90F40274C03AE00A93410 /* API */,
+				05D90F3F274C03A400A93410 /* Resources */,
+				05D90F3E274C038100A93410 /* Helpers */,
 				05D90F1F274BED3800A93410 /* ViewControllers */,
 				05D90F1D274BECD200A93410 /* Coordinators */,
-				05D90F09274BEAE800A93410 /* AppDelegate.swift */,
-				05D90F0B274BEAE800A93410 /* SceneDelegate.swift */,
-				05D90F12274BEAED00A93410 /* Assets.xcassets */,
-				05D90F14274BEAED00A93410 /* LaunchScreen.storyboard */,
-				05D90F17274BEAED00A93410 /* Info.plist */,
 			);
 			path = Jokes;
 			sourceTree = "<group>";
@@ -100,6 +106,7 @@
 		05D90F1F274BED3800A93410 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				05D90F3B274C024900A93410 /* Jokes */,
 				05D90F2D274BF4C600A93410 /* Auth */,
 				05D90F39274BFA7B00A93410 /* FlowController.swift */,
 			);
@@ -131,6 +138,48 @@
 				05D90F35274BF79400A93410 /* SignUpPasswordViewController.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		05D90F3B274C024900A93410 /* Jokes */ = {
+			isa = PBXGroup;
+			children = (
+				05D90F3C274C025900A93410 /* JokesViewController.swift */,
+			);
+			path = Jokes;
+			sourceTree = "<group>";
+		};
+		05D90F3E274C038100A93410 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				05D90F09274BEAE800A93410 /* AppDelegate.swift */,
+				05D90F0B274BEAE800A93410 /* SceneDelegate.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		05D90F3F274C03A400A93410 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				05D90F12274BEAED00A93410 /* Assets.xcassets */,
+				05D90F14274BEAED00A93410 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		05D90F40274C03AE00A93410 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				05D90F41274C03B900A93410 /* JokeAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		05D90F43274C049F00A93410 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				05D90F44274C04AA00A93410 /* Joke.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,8 +258,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05D90F3D274C025900A93410 /* JokesViewController.swift in Sources */,
 				05D90F34274BF72900A93410 /* SignUpLoginViewController.swift in Sources */,
 				05D90F21274BEE0000A93410 /* AppCoordinator.swift in Sources */,
+				05D90F42274C03B900A93410 /* JokeAPI.swift in Sources */,
 				05D90F29274BF28900A93410 /* StartViewController.swift in Sources */,
 				05D90F27274BEEFF00A93410 /* JokeFlowCoordinator.swift in Sources */,
 				05D90F23274BEE2000A93410 /* Coordinator.swift in Sources */,
@@ -218,6 +269,7 @@
 				05D90F0A274BEAE800A93410 /* AppDelegate.swift in Sources */,
 				05D90F36274BF79400A93410 /* SignUpPasswordViewController.swift in Sources */,
 				05D90F25274BEED200A93410 /* AuthFlowCoordinator.swift in Sources */,
+				05D90F45274C04AA00A93410 /* Joke.swift in Sources */,
 				05D90F38274BF85F00A93410 /* CoordinatorFactory.swift in Sources */,
 				05D90F0C274BEAE800A93410 /* SceneDelegate.swift in Sources */,
 				05D90F3A274BFA7B00A93410 /* FlowController.swift in Sources */,

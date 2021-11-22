@@ -23,6 +23,8 @@ class JokeFlowCoordinator: Coordinator {
     // MARK: - Coordinator Methods
     
     func start() {
+        let jokesViewController = JokesViewController()
         
+        navigationController.pushViewController(jokesViewController, animated: true)
     }
 }
