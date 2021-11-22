@@ -21,6 +21,8 @@ class SignUpPasswordViewController: UIViewController, FlowController {
         textField.borderStyle = .roundedRect
         textField.placeholder = "Password"
         textField.textColor = .black
+        textField.addTarget(self, action: #selector(onTextFieldEditing), for: .editingChanged)
+
         
         return textField
     }()
@@ -72,5 +74,19 @@ class SignUpPasswordViewController: UIViewController, FlowController {
     @objc private func onNextButtonTouchUpInside() {
         completionHandler?(())
     }
+    
+    @objc private func onTextFieldEditing() {
+        guard let text = passwordTextField.text else {
+            nextButton.isEnabled = false
+            return
+        }
+        
+        if text.isEmpty {
+            nextButton.isEnabled = false
+        } else {
+            nextButton.isEnabled = true
+        }
+    }
+
 }
 
