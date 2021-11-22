@@ -21,6 +21,7 @@ class SignUpLoginViewController: UIViewController, FlowController {
         textField.borderStyle = .roundedRect
         textField.placeholder = "Login"
         textField.textColor = .black
+        textField.addTarget(self, action: #selector(onTextFieldEditing), for: .editingChanged)
         
         return textField
     }()
@@ -31,6 +32,7 @@ class SignUpLoginViewController: UIViewController, FlowController {
         button.setTitleColor(.systemBlue, for: .normal)
         button.setTitle("next", for: .normal)
         button.addTarget(self, action: #selector(onNextButtonTouchUpInside), for: .touchUpInside)
+        button.isEnabled = false
         
         return button
     }()
@@ -71,5 +73,18 @@ class SignUpLoginViewController: UIViewController, FlowController {
     
     @objc private func onNextButtonTouchUpInside() {
         completionHandler?(())
+    }
+    
+    @objc private func onTextFieldEditing() {
+        guard let text = loginTextField.text else {
+            nextButton.isEnabled = false
+            return
+        }
+        
+        if text.isEmpty {
+            nextButton.isEnabled = false
+        } else {
+            nextButton.isEnabled = true
+        }
     }
 }
