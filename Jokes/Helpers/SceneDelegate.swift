@@ -19,6 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = appCoordinator.navigationController
         
+//        window?.rootViewController = JokesViewController()
+        
         appCoordinator.start()
         
         window?.makeKeyAndVisible()
