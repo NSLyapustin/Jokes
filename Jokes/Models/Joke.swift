@@ -11,7 +11,7 @@ struct Joke: Decodable {
     let activity: String
     let type: String
     let participants: Int
-    let price: Int
+    let price: Double
     let link: String
     let key: String
     let accessibility: Double
